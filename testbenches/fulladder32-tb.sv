@@ -20,7 +20,7 @@ module fulladder32_tb;
         .cout   (cout)
     );
 
-
+    // Everything below this is AI generated.
     // Test task
     task automatic check(
         input logic [31:0] test_a,
