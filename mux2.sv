@@ -4,9 +4,9 @@
 module fulladder32(   
             input   logic [31:0] a, 
             input   logic [31:0] b,
-            input   logic [31:0] cin,
+            input   logic        cin,
             output  logic [31:0] s,
-            output  logic [31:0] cout
+            output  logic        cout
 );
 
 logic [31:0] p;
