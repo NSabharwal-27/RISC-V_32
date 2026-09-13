@@ -21,11 +21,11 @@ module register_file(
 
 logic [31:0] register_file [0:31];
 
-assign o_rs1 = (i_rs1_addr == 5'b0) ? 5'b0 : register_file[i_rs1_addr];
-assign o_rs2 = (i_rs2_addr == 5'b0) ? 5'b0 : register_file[i_rs2_addr];
+assign o_rs1 = (i_rs1_addr == 5'b0) ? 32'b0 : register_file[i_rs1_addr];
+assign o_rs2 = (i_rs2_addr == 5'b0) ? 32'b0 : register_file[i_rs2_addr];
 
 always_ff @(posedge clk or negedge rst) begin
-    
+
     if (!rst) begin
         for(int i = 0; i < 32; i = i+1) begin
             register_file[i] <= 32'b0;
