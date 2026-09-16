@@ -1,6 +1,6 @@
 module imem(
-    input logic [31:0] addr,
-    output logic [31:0] instr
+    input logic [31:0] i_addr,
+    output logic [31:0] o_instr
 );
 /* 256 rows of mem, 32 bits wide each. */
 reg [31:0] rom [1023:0];
